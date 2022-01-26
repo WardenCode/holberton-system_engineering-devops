@@ -8,4 +8,5 @@ This project is about Shell & bash scripts
  3. 3-listfiles &rarr; Display current directory contents in a long format.
  4. 4-listmorefiles &rarr; Display current directory contents with the long format, including hidden files (starting with .).
  5. 5-listfilesdigitonly &rarr; Display current directory with long format, hidden files and the user & groups IDs displayed numericallly
- 6. 6-firstdirectory &rarr; creates my_first_directory in the /tmp/ directory. 
+ 6. 6-firstdirectory &rarr; Creates my_first_directory in the /tmp/ directory.
+ 7. 7-movethatfile &rarr;  Move the file betty from /tmp/ to /tmp/my_first_directory.
