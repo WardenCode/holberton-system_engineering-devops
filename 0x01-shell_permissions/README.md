@@ -35,3 +35,10 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 ### Advances:
 
+100-change\_owner\_and_group &rarr; Change the owner to vincent and the group owner to staff for all the files and directories in the working directory.
+
+101-symbolic\_link_permissions &rarr; Changes the owner and the group owner of _hello to vincent and staff respectively.
+
+102-if_only &rarr; Write a script that changes the owner of the file hello to vincent only if it is owned by the user guillaume.
+
+103-Star_Wars &rarr; Play the StarWars IV episode in the terminal.
