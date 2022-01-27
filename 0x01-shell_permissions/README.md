@@ -6,7 +6,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 ### Mandatories:
 0-iam_betty &rarr; Switch the current user to the user betty.
-
+1-who_am_i &rarr; Print the effective username of the current user.
 
 ### Advances:
 
