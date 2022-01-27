@@ -15,5 +15,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 4-empty &rarr; Create an empty file called hello.
 
+5-execute &rarr; Add execute permission to the owner of the file hello.
+
 ### Advances:
 
