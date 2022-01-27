@@ -31,5 +31,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 12-directory\_permissions &rarr; Create a directory called my_dir with permissions 751 in the working directory.
 
+13-change_group &rarr; Changes the group owner to school for the file hello.
+
 ### Advances:
 
