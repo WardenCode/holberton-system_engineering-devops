@@ -27,5 +27,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 10-mirror_permissions &rarr; Set the mode of the file hello the same as olleh’s mode.
 
+11-directories_permissions &rarr; Add execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
+
 ### Advances:
 
