@@ -12,3 +12,4 @@ This project is about Shell & bash scripts
  7. 7-movethatfile &rarr; Move the file betty from /tmp/ to /tmp/my_first_directory.
  8. 8-firstdelete &rarr; Delete the file betty. betty is in /tmp/my_first_directory.
  9. 9-firstdirdeletion &rarr; Delete the directory my_first_directory that is in the /tmp directory.
+ 10. 10-back &rarr; Changes the working directory to the previous one.
