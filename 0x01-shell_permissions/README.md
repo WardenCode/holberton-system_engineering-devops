@@ -11,5 +11,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 2-groups &rarr; Print all the groups the current user is part of.
 
+3-new_owner &rarr; Change the owner of the file hello to the user betty.
+
 ### Advances:
 
