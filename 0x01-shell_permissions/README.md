@@ -25,5 +25,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 9-John_Doe &rarr; Sets the mode of the file hello to this: -rwxr-x-wx.
 
+10-mirror_permissions &rarr; Set the mode of the file hello the same as olleh’s mode.
+
 ### Advances:
 
