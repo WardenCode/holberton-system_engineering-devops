@@ -19,5 +19,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 6-multiple_permissions &rarr; Add execute permission to the owner and the group owner, and read permission to other users, to the file hello.
 
+7-everybody &rarr; Add execution permission to the owner, the group owner and the other users, to the file hello.
+
 ### Advances:
 
