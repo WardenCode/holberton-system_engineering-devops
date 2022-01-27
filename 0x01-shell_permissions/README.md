@@ -9,5 +9,7 @@ The numbered executable files are the tasks and are divided into mandatory and a
 
 1-who_am_i &rarr; Print the effective username of the current user.
 
+2-groups &rarr; Print all the groups the current user is part of.
+
 ### Advances:
 
