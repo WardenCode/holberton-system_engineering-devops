@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | tr ":" "\n" | grep ^[^\n]
+echo $PATH | tr ":" "\n" | grep ^[^\n] | wc -l
