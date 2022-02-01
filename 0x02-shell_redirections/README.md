@@ -69,10 +69,10 @@ Exist two types of tasks in this project:
 
 ### Advanced
 
--  &rarr;  .
+- 100-empty_casks &rarr; Finds all empty files and directories in the current directory and all sub-directories.
 
--  &rarr;  .
+- 101-gifs &rarr; Lists all the files with a .gif extension in the current directory and all its sub-directories.
 
--  &rarr;  .
+- 102-acrostic &rarr; Decodes acrostics that use the first letter of each line.
 
--  &rarr;  .
+- 103-the\_biggest_fan &rarr; Parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
