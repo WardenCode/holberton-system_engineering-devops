@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -Ra | find -empty | cut -c 3-
