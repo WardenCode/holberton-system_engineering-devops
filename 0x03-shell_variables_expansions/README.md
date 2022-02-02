@@ -52,12 +52,10 @@ Exist two types of tasks in this project:
 
 ### Advanced
 
--  &rarr; .
+- 100-decimal\_to\_hexadecimal &rarr; Converts a number from base 10 to base 16.
 
--  &rarr; .
+- 101-rot13 &rarr; Encodes and decodes text using the rot13 encryption.
 
--  &rarr; .
+- 102-odd &rarr; Prints every other line from the input, starting with the first line.
 
--  &rarr; .
-
--  &rarr; .
+- 103-water\_and_stir &rarr; Adds the two numbers stored in the environment variables WATER and STIR and prints the result.
