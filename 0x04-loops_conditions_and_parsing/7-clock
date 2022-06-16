@@ -4,16 +4,16 @@
 hours=-1
 minutes=60
 
-while [ "${hours}" -ne 12 ]
+while [ "${hours}" -ne 13 ]
 do
 	if [ "${minutes}" -eq 60 ]
 	then
 		((hours++))
-		echo "Hour: ${hours}"
-		if [ "${hours}" -eq 12 ]
+		if [ "${hours}" -eq 13 ]
 		then
 			break
 		fi
+		echo "Hour: ${hours}"
 		minutes=1
 	fi
 	echo "${minutes}"
