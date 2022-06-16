@@ -8,13 +8,13 @@ do
 	echo "${i}"
 	case "${i}" in
 	4)
-		echo "bad luck for China"
+		echo "bad luck from China"
 	;;
 	9)
-		echo "bad luck for Japan"
+		echo "bad luck from Japan"
 	;;
 	17)
-		echo "bad luck for Italy"
+		echo "bad luck from Italy"
 	;;
 	esac
 	((i++))
