@@ -22,7 +22,7 @@ This project is about topics of Networking. Based in question and answers.
 
 		2. What type of network could connect an office in one building to another office in a building a few streets away?
 
-		3. What network do you use when you browse www.google.com from your smartphone (not connected to the Wifi)?
+		3. What network do you use when you browse www.google.com from your smartphone (without Wifi)?
 
 - **2-MAC_and_IP_address** &rarr; About MAC and IP address.
 
