@@ -1,23 +1,20 @@
-# Install nginx with puppet
+# Install Nginx web server (w/ Puppet)
 package { 'nginx':
-  ensure   => '1.18.0',
-  provider => 'apt',
+  ensure => installed,
 }
 
-file { 'Hellow World':
-  path    => '/var/www/html/index.nginx-debian.html',
-  content => 'Hellow World',
+file_line { 'line':
+  ensure => 'present',
+  path   => '/etc/nginx/sites-available/default',
+  after  => 'server_name _',
+  line   => 'rewrite ^/redirect_me https://www.youtube.com/watch?v=hdZUCjAQaGw permanent;',
 }
 
-file_line { 'Hellow World':
-  path  => '/etc/nginx/sites-available/default',
-  after => 'server_name _;',
-  line  => '\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;',
+file { '/var/www/html/index.html':
+  content => 'Hello World',
 }
 
-exec { 'service':
-  command  => 'service nginx start',
-  provider => 'shell',
-  user     => 'root',
-  path     => '/usr/sbin/service',
+service { 'nginx':
+  ensure  => running,
+  require => Package['nginx'],
 }
