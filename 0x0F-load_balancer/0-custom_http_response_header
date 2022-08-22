@@ -2,6 +2,10 @@
 # Configure Http Header Response
 search="\troot \/var\/www\/html;"
 new_string="\tadd_header X-Served-By $(hostname);"
+
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install nginx
 sudo sed -i "s/${search}/${search}\n\n${new_string}/" /etc/nginx/sites-available/default
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
