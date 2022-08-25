@@ -4,23 +4,29 @@
 domain="${1}"
 subdomain="${2}"
 
-get_data() {
-	  data[0]=$(echo "${query}" | awk '{print $1}')
-	  data[1]=$(echo "${query}" | awk '{print $4}')
-	  data[2]=$(echo "${query}" | awk '{print $5}')
+do_query () {
+		query=$(dig "${1}.${2}" | grep -A1 'ANSWER SECTION' | tail -1)
 }
 
-if [ "${#}" -ge 2 ];
+get_data () {
+	  data[0]=$(echo "${query}" | awk '{print $4}')
+	  data[1]=$(echo "${query}" | awk '{print $5}')
+}
+
+print_msg () {
+		echo "The subdomain ${1} is a ${2} record and points to ${3}"
+}
+
+if [ "${#}" -ge 2 ]
 then
-		query=$(dig "${subdomain}.${domain}" | grep -A1 'ANSWER SECTION' | tail -1)
+		do_query "${subdomain}" "${domain}"
 		get_data "${query}"
-		echo "The subdomain ${subdomain} is a ${data[1]} record and points to ${data[2]}"
+		print_msg "${subdomain}" "${data[0]}" "${data[1]}"
 else
-		def_subdomains=("www" "lb-01" "web-01" "web-02")
-		for sub in {0..3}
+		for sub in "www" "lb-01" "web-01" "web-02"
 		do
-				query=$(dig "${def_subdomains[sub]}.${1}" | grep -A1 'ANSWER SECTION' | tail -1)
+				do_query "${sub}" "${domain}"
 				get_data "${query}"
-				echo "The subdomain ${def_subdomains[sub]} is a ${data[1]} record and points to ${data[2]}"
+				print_msg "${sub}" "${data[0]}" "${data[1]}"
 		done
 fi
