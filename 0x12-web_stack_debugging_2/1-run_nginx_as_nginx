@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+chown nginx:nginx nginx.conf
+chmod 700 nginx.conf
+sed -i 's/80 default/8080 default/' /etc/nginx/sites-available/default
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled
+sudo -u nginx service nginx stop
+sudo -u nginx service nginx start
