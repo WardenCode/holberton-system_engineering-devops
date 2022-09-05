@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# Run the command whoami like other user passed by parameter
 user="${1}"
 sudo -u "${user}" whoami
