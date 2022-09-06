@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Create a backup of all databases and also create an .tar.gz file
+password="${1}"
+name_of_tar=$(date --rfc-3339=date |  awk -F- '{print $3"-"$2"-"$1}')
+
+mysqldump -u root -p"${password}" --all-databases > backup.sql
+tar -czvf "${name_of_tar}".tar.gz backup.sql
+
