@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Run nginx like nginx user to prevent an attack. but short and sweet
-chown nginx:nginx nginx.conf
-chmod 700 nginx.conf
+chown nginx:nginx /etc/nginx/nginx.conf
+chmod 700 /etc/nginx/nginx.conf
 sed -i 's/80 default/8080 default/' /etc/nginx/sites-available/default
 sudo -u nginx service nginx stop
 sudo -u nginx service nginx start
