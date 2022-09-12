@@ -22,7 +22,7 @@ if __name__ == "__main__":
     username = user.get('username')
 
     with open('{}.csv'.format(user_id), 'w', encoding='UTF8') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in all_tasks:
             status = task.get("completed")
             title = task.get("title")
