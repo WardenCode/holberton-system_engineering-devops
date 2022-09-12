@@ -19,7 +19,7 @@ if __name__ == "__main__":
     user = get(user_url).json()
     all_tasks = get(todo_url).json()
 
-    name = user.get('name')
+    username = user.get('username')
     name_file = '{}.json'.format(user_id)
 
     with open(name_file, 'w', encoding='UTF8') as file:
@@ -30,7 +30,7 @@ if __name__ == "__main__":
             tmp_obj = {
                 "task": task.get("title"),
                 "completed": task.get("completed"),
-                "username": name,
+                "username": username,
             }
             final_obj[user_id].append(tmp_obj)
         json.dump(final_obj, file, indent=4)

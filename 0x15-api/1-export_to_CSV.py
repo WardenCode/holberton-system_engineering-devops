@@ -19,12 +19,12 @@ if __name__ == "__main__":
     user = get(user_url).json()
     all_tasks = get(todo_url).json()
 
-    name = user.get('name')
+    username = user.get('username')
 
     with open('{}.csv'.format(user_id), 'w', encoding='UTF8') as file:
         writer = csv.writer(file)
         for task in all_tasks:
             status = task.get("completed")
             title = task.get("title")
-            data = [user_id, name, status, title]
+            data = [user_id, username, status, title]
             writer.writerow(data)

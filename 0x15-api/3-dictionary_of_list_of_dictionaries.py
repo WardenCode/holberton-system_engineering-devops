@@ -23,7 +23,7 @@ if __name__ == "__main__":
             user_task = get("{}/{}/todos".format(base_url, user_id)).json()
             for task in user_task:
                 tmp_obj = {
-                    "username": user.get("name"),
+                    "username": user.get("username"),
                     "task": task.get("title"),
                     "completed": task.get("completed"),
                 }
