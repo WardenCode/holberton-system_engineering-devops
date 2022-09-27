@@ -11,26 +11,39 @@ header = {
 }
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], after='nothing'):
     """
     Prints the titles of the hot posts listed for a given subreddit.
     recursively
     """
 
-    base_url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    base_url = 'https://www.reddit.com/r/{}/hot.json?after={}#'.format(
+        subreddit, after)
     response = get(base_url, headers=header, allow_redirects=False)
+
+    if (after is None):
+        return
 
     if (response.status_code != 200):
         return (None)
 
-    size_list = len(hot_list)
-
     data = response.json().get('data')
     elements = data.get('children')
 
-    if (size_list != len(elements)):
-        title = elements[size_list].get('data').get('title')
-        hot_list.append(title)
-        recurse(subreddit, hot_list)
+    iterate_children(elements, hot_list, 0)
+    recurse(subreddit, hot_list, data.get('after'))
 
     return (hot_list)
+
+
+def iterate_children(childrens, hotlist, counter=0):
+    """
+    Iterate over the childrens on the API
+    """
+    if (len(childrens) == counter):
+        print(len(hotlist))
+        return
+
+    hotlist.append(childrens[counter].get('data').get('title'))
+
+    iterate_children(childrens, hotlist, counter + 1)
