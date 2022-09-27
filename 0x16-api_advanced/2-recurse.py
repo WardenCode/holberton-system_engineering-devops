@@ -28,7 +28,20 @@ def recurse(subreddit, hot_list=[], after='nothing'):
         return (None)
 
     data = response.json().get('data')
-    hot_list += data.get('children')
+    elements = data.get('children')
+    iterate_children(elements, hot_list, 0)
     recurse(subreddit, hot_list, data.get('after'))
 
     return (hot_list)
+
+
+def iterate_children(childrens, hotlist, counter=0):
+    """
+    Iterate over the childrens on the API
+    """
+    if (len(childrens) == counter):
+        return
+
+    hotlist.append(childrens[counter].get('data').get('title'))
+
+    iterate_children(childrens, hotlist, counter + 1)
