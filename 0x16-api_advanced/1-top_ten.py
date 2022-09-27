@@ -11,7 +11,8 @@ def top_ten(subreddit):
     Prints the titles of the first 10 hot posts listed for a given subreddit.
     """
 
-    base_url = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
+    base_url = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(
+        subreddit)
 
     header = {
         'User-Agent': 'Linux:api_advanced:v0.0.0 (by /u/ElEnriquez)'
@@ -27,4 +28,3 @@ def top_ten(subreddit):
 
     for topic in top_ten:
         print(topic.get('data').get('title'))
-
